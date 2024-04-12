@@ -1,0 +1,1342 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@200;300&display=swap" rel="stylesheet">
+    <title>Jobseekers Login-hirist.com</title>
+</head>
+
+<body>
+    <!---------------------------------------------Navbar Starts Here-------------------------------- -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white border-bottom">
+        <div class="container-fluid">
+            <div id="logo">
+                <img src="images/hirist_logo.svg" alt="logo" height="62px" width="82px">
+            </div>
+            <!-- <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"
+            class="navbar-toggler d-none d-md-block" style="z-index: 1;">
+            <span class="navbar-toggler-icon"></span>
+          </button> -->
+            <button type="button" data-bs-toggle="modal" data-bs-target="#NavbarModal"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"
+                class="navbar-toggler btn position-fixed align-items-center border-0 d-sm-lg-block" style="z-index: 1;">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse bg-white d-none" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mt-3 mb-lg-0 ">
+                    <li class="nav-item">
+                        <a class="nav-link active ps-5 fw-semibold" aria-current="page" href="#">Mobile Application
+                            <span class="d-none d-md-block" id="btm-color"></span>
+                        </a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link  active fw-semibold" data-bs-placement="bottom" href="#" id="navbarDropdown"
+                            role="button" aria-expanded="false">
+                            Frontend Developer
+                            <span class="d-none d-md-block" id="btm-color"></span>
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="#">JavaScript</a></li>
+                            <li><a class="dropdown-item" href="#">React</a></li>
+                            <li><a class="dropdown-item" href="#">Angular</a></li>
+                        </ul>
+
+                    </li>
+
+                    <li class="nav-item pe-3 me-3">
+                        <a class="nav-link dropdown-toggle ps-3 pe-3 active fw-semibold" href="#" id="navbarDropdown"
+                            role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <span>More</span>
+                        </a>
+                        <span id="btm-color" style="visibility: hidden;"></span>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="#">Backend Developer</a></li>
+                            <li><a class="dropdown-item" href="#">DevOps</a></li>
+                            <li><a class="dropdown-item" href="#">Data Science</a></li>
+                            <li><a class="dropdown-item" href="#">Quality Assurance</a></li>
+                            <li><a class="dropdown-item" href="#">Product Management</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active fw-semibold ps-5 ms-4 border-start" aria-current="page" href="#">Work
+                            From Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link ps-3" href="#">Courses</a>
+                    </li>
+                </ul>
+
+                <section class="d-flex pe-3 me-3">
+                    <a href="#" class="me-3 pe-3 pt-2"><svg xmlns="http://www.w3.org/2000/svg" width="25" height="25"
+                            fill="#212529" class="bi bi-search" viewBox="0 0 16 16">
+                            <path
+                                d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0" />
+                        </svg></a>
+
+                    <!-- <a href="login.html" target="_blank">
+                        <button class="btn px-4" type="submit" style="border: 1px solid #e9630c;">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="#e9630c"
+                                class="bi bi-person" viewBox="0 0 16 16">
+                                <path
+                                    d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6m2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0m4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4m-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10s-3.516.68-4.168 1.332c-.678.678-.83 1.418-.832 1.664z" />
+                            </svg>
+                            <span class="ps-3" style="color: #e9630c;">Login</span>
+                        </button>
+                    </a> -->
+
+                    <div class="dropdown">
+                        <button class="btn px-4" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown"
+                            aria-expanded="false" style="border: 1px solid #e9630c;">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="#e9630c"
+                                class="bi bi-person" viewBox="0 0 16 16">
+                                <path
+                                    d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6m2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0m4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4m-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10s-3.516.68-4.168 1.332c-.678.678-.83 1.418-.832 1.664z" />
+                            </svg>
+                            <span class="ps-3" style="color: #e9630c;">Login</span>
+                        </button>
+                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                            <li><a class="dropdown-item" href="./signin.html">Login</a></li>
+                            <li><a class="dropdown-item" href="./signup.html">Sign Up</a></li>
+                        </ul>
+                    </div>
+
+
+                </section>
+
+            </div>
+        </div>
+    </nav>
+
+
+
+    <!------------------------------------------Banner section starts here---------------------------------------- -->
+    <div class="d-flex gap-1 bg-white">
+
+        <a href="#"><img src="https://d3qr48lsanmyop.cloudfront.net/webp/1688562589937.webp" class="img-fluid"
+                alt="Image-2"></a>
+        <a href="#"><img src="https://d3qr48lsanmyop.cloudfront.net/webp/1688562586620.webp" class="img-fluid"
+                alt="Image-3"></a>
+
+        <a href="#"><img src="https://d3qr48lsanmyop.cloudfront.net/webp/1688562593148.webp" class="img-fluid"
+                alt="Image-1"></a>
+        <!-- <img class="company-image" src="./images/banner-images/companyimage1.webp">
+        <a href="https://showcase.hirist.com/v2/rscp-interfaceai-5467.html?src=hirist&amp;ref=cat"
+            class="showcase-title view-showcase" target="_blank">VISIT COMPANY PAGE</a> -->
+
+    </div>
+    </div>
+    <!-- ------------------------------------------Banner section ends here---------------->
+    <!-----------------------------------------------Job Companies Courses Navigation section starts here-------------------------------->
+
+    <div class="d-flex mt-3 ms-5 ps-0">
+        <a href="jobs.html" class="jobs text-secondary text-decoration-none">Jobs<i
+                class="sc-bxivhb navigation-bar d-block"></i></a>
+        <a href="companies.html" class="companies text-secondary text-decoration-ms-5 ps-5">Companies<i
+                class="sc-bxivhb navigation-bar d-none"></i></a>
+        <a href="/" target="_blank" class="courses text-secondary text-decoration-ms-5 ps-5">Courses<i
+                class="sc-bxivhb navigation-bar d-none"></i></a>
+    </div>
+    <!-----------------------------------------------Job Companies Courses Navigation section Ends here-------------------------------->
+
+    <!---------------------------------------- Filter Section starts here ---------------------------------------------->
+    <button type="button"
+        class="btn btn-sm position-fixed bottom-0 start-50  translate-middle d-md-none d-sm-lg-block filter-bg"
+        data-bs-toggle="modal" data-bs-target="#filterModal" style="z-index: 1;">
+        Filter
+    </button>
+    <div class="modal fade" id="filterModal" tabindex="-1" aria-labelledby="filterModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="filterModalLabel">Filter By:</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="btn-group">
+                        <button class="btn btn-white dropdown-toggle rounded-pill border bg-white ms-2" type="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Any Exp. Level
+                        </button>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item mb-3" href="#">Any Exp. Level</a></li>
+                            <li><a class="dropdown-item mb-3" href="#">0 - 1 Yrs</a></li>
+                            <li><a class="dropdown-item mb-3" href="#">0 - 3 Yrs</a></li>
+                            <li><a class="dropdown-item mb-3" href="#">3 - 5 Yrs</a></li>
+                            <li><a class="dropdown-item mb-3" href="#">5 - 8 Yrs</a></li>
+                        </ul>
+                    </div>
+                    <div class="btn-group dropdown">
+                        <button class="btn btn-white dropdown-toggle rounded-pill border bg-white ms-2" type="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Any Location
+                        </button>
+                        <div class="btn-topbar"></div>
+                        <ul class="dropdown-menu">
+                            <div class="d-flex kwlbta mb-3">
+                                <div>
+                                    <i class="fa-solid fa-magnifying-glass ms-2 mb-3"></i>
+                                </div>
+                                <div>
+                                    <input type="text" class="jSrDpv mb-5" placeholder="Search job location here...">
+                                </div>
+                            </div>
+                            <li class="list-group-item dropdown-item ms-3 mb-3">
+                                <input class="form-check-input me-1" type="radio" name="listGroupRadio" value=""
+                                    id="firstRadio" checked>
+                                <label class="form-check-label ms-2" for="firstRadio">Bangalore</label>
+                            </li>
+                            <li class="list-group-item dropdown-item ms-3 mb-3">
+                                <input class="form-check-input me-1" type="radio" name="listGroupRadio" value=""
+                                    id="firstRadio" checked>
+                                <label class="form-check-label ms-2" for="firstRadio">Chennai</label>
+                            </li>
+                            <li class="list-group-item dropdown-item ms-3 mb-3">
+                                <input class="form-check-input me-1" type="radio" name="listGroupRadio" value=""
+                                    id="firstRadio" checked>
+                                <label class="form-check-label ms-2" for="firstRadio">Hyderabad</label>
+                            </li>
+                            <li class="list-group-item dropdown-item ms-3 mb-3">
+                                <input class="form-check-input me-1" type="radio" name="listGroupRadio" value=""
+                                    id="firstRadio" checked>
+                                <label class="form-check-label ms-2" for="firstRadio">Mumbai</label>
+                            </li>
+                            <li class="list-group-item dropdown-item ms-3 mb-3">
+                                <input class="form-check-input me-1" type="radio" name="listGroupRadio" value=""
+                                    id="firstRadio" checked>
+                                <label class="form-check-label ms-2" for="firstRadio">Pune</label>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Apply</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- ---------------------------------nrml filter--------------------------- -->
+    <section class="filter d-md-block d-none mt-3 pt-2 ps-5 ps-3">
+        <span class="filter-heading">Filter By:</span>
+        <div class="btn-group">
+            <button class="btn btn-white dropdown-toggle rounded-pill border bg-white ms-2" type="button"
+                data-bs-toggle="dropdown" aria-expanded="false">
+                Any Exp. Level
+            </button>
+            <ul class="dropdown-menu">
+                <li><a class="dropdown-item mb-3" href="#">Any Exp. Level</a></li>
+                <li><a class="dropdown-item mb-3" href="#">0 - 1 Yrs</a></li>
+                <li><a class="dropdown-item mb-3" href="#">0 - 3 Yrs</a></li>
+                <li><a class="dropdown-item mb-3" href="#">3 - 5 Yrs</a></li>
+                <li><a class="dropdown-item mb-3" href="#">5 - 8 Yrs</a></li>
+            </ul>
+        </div>
+        <div class="btn-group dropdown">
+            <button class="btn btn-white dropdown-toggle rounded-pill border bg-white ms-2" type="button"
+                data-bs-toggle="dropdown" aria-expanded="false">
+                Any Location
+            </button>
+            <div class="btn-topbar"></div>
+            <ul class="dropdown-menu">
+                <div class="d-flex kwlbta mb-3">
+                    <div>
+                        <i class="fa-solid fa-magnifying-glass ms-2 mb-3"></i>
+                    </div>
+                    <div>
+                        <input type="text" class="jSrDpv mb-5" placeholder="Search job location here...">
+                    </div>
+                </div>
+                <li class="list-group-item dropdown-item ms-3 mb-3">
+                    <input class="form-check-input me-1" type="radio" name="listGroupRadio" value="" id="firstRadio"
+                        checked>
+                    <label class="form-check-label ms-2" for="firstRadio">Bangalore</label>
+                </li>
+                <li class="list-group-item dropdown-item ms-3 mb-3">
+                    <input class="form-check-input me-1" type="radio" name="listGroupRadio" value="" id="firstRadio"
+                        checked>
+                    <label class="form-check-label ms-2" for="firstRadio">Chennai</label>
+                </li>
+                <li class="list-group-item dropdown-item ms-3 mb-3">
+                    <input class="form-check-input me-1" type="radio" name="listGroupRadio" value="" id="firstRadio"
+                        checked>
+                    <label class="form-check-label ms-2" for="firstRadio">Hyderabad</label>
+                </li>
+                <li class="list-group-item dropdown-item ms-3 mb-3">
+                    <input class="form-check-input me-1" type="radio" name="listGroupRadio" value="" id="firstRadio"
+                        checked>
+                    <label class="form-check-label ms-2" for="firstRadio">Mumbai</label>
+                </li>
+                <li class="list-group-item dropdown-item ms-3 mb-3">
+                    <input class="form-check-input me-1" type="radio" name="listGroupRadio" value="" id="firstRadio"
+                        checked>
+                    <label class="form-check-label ms-2" for="firstRadio">Pune</label>
+                </li>
+            </ul>
+        </div>
+        <button class="btn ms-3 px-4 rounded-pill" type="submit" style="border: 1px solid #e9630c;"><span
+                style="color: #e9630c;">Apply</span></button>
+    </section>
+    <!-----------------------------------------------Filter Section Ends here ---------------------------------------->
+    <!-----------------------------------------Companies Section starts here-------------------------------------------- -->
+
+
+    <div class="container-fluid custom-bg">
+        <!-- Stack the columns on mobile by making one full-width and the other half-width -->
+        <div class="row">
+            <div class="col-md-8">
+                <div class="company-heading ps-4 mt-4 ">Companies</div>
+                <div class="card mt-4 ms-5 mb-3">
+                    <div class="card-body ps-5">
+                        <div class="row">
+                            <div class="col-md-8">
+                                <div class="img-logo">
+                                    <img src="./images/banner-images/ola.webp">
+                                </div>
+                                <h5 class="card-title font-weight-bolder">OLA cabs</h5>
+                                <p class="card-text">naukri.com | Multiple Locations</p>
+                                <p class="card-text">Info Edge is India's leading consumer internet company known for
+                                    its strong brands in recruitment (naukri.com, ... (more))</p>
+
+                                <div class="text-muted d-flex-wrap mb-2">Perks & Benefits</div>
+                                <div id="perk" class="circle-company-perks">
+                                    <span id="display_perk" class="set-tooltip sc-bwzfXH kLlbyo px-1 me-2"><i
+                                            class="fa-solid fa-heart-pulse fa-lg"></i></span>
+                                    <span id="display_perk" class="set-tooltip sc-bwzfXH kLlbyo px-1 me-2">
+                                        <i class="fa-solid fa-dumbbell fa-lg"></i></span>
+                                    <span id="display_perk" class="set-tooltip sc-bwzfXH kLlbyo px-1 me-2"><i
+                                            class="fa-solid fa-heart-pulse fa-lg"></i></span>
+                                    <span id="display_perk" class="set-tooltip sc-bwzfXH kLlbyo px-1 me-2"><i
+                                            class="fa-solid fa-heart-pulse fa-lg"></i></span>
+                                    <span id="display_perk"
+                                        class="set-tooltip sc-bwzfXH kLlbyo px-1 me-3 backgrnd-bg">+2</span>
+                                    <a href="https://showcase.hirist.com/v2/rscp-ola-cabs-1407.html?ref=jscompanytab#Jobs"
+                                        class="btn btn-sm btn-outline-secondary  rounded-pill">+ View All
+                                        Jobs</a>
+                                </div>
+
+                            </div>
+                            <div class="d-md-block  col-md-3 rounded pt-2 ms-5">
+                                <img src="./images/ca1.jpeg" class="d-md-block d-none card-img-top img-fluid"
+                                    alt="Company Logo">
+                                <div class="d-block d-md-none mb-3 ps-0 mt-3 border-top"
+                                    style="width: 100%; margin-left: -60px;"></div>
+                                <a href="https://showcase.hirist.com/v2/rscp-ola-cabs-1407.html?ref=jscompanytab"
+                                    class="card-txt justify-content-center" target="_blank">VISIT COMPANY PAGE</a>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--------------------------------------------------------------2card--------------------------------------------  -->
+
+                <div class="card mt-4 ms-5 mb-3">
+                    <div class="card-body ps-5">
+                        <div class="row">
+                            <div class="col-md-8">
+                                <div class="img-logo">
+                                    <img src="./images/banner-images/ola.webp">
+                                </div>
+                                <h5 class="card-title font-weight-bolder">InfoEdge</h5>
+                                <p class="card-text">naukri.com | Multiple Locations</p>
+                                <p class="card-text">Info Edge is India's leading consumer internet company known for
+                                    its strong brands in recruitment (naukri.com, ... (more))</p>
+
+                                <div class="text-muted d-flex-wrap mb-2">Perks & Benefits</div>
+                                <div id="perk" class="circle-company-perks">
+                                    <span id="display_perk" class="set-tooltip sc-bwzfXH kLlbyo px-1 me-2"><i
+                                            class="fa-solid fa-heart-pulse fa-lg"></i></span>
+                                    <span id="display_perk" class="set-tooltip sc-bwzfXH kLlbyo px-1 me-2">
+                                        <i class="fa-solid fa-dumbbell fa-lg"></i></span>
+                                    <span id="display_perk" class="set-tooltip sc-bwzfXH kLlbyo px-1 me-2"><i
+                                            class="fa-solid fa-heart-pulse fa-lg"></i></span>
+                                    <span id="display_perk" class="set-tooltip sc-bwzfXH kLlbyo px-1 me-2"><i
+                                            class="fa-solid fa-heart-pulse fa-lg"></i></span>
+                                    <span id="display_perk"
+                                        class="set-tooltip sc-bwzfXH kLlbyo px-1 me-3 backgrnd-bg">+2</span>
+                                    <a href="https://showcase.hirist.com/v2/rscp-ola-cabs-1407.html?ref=jscompanytab#Jobs"
+                                        class="btn btn-sm btn-outline-secondary  rounded-pill">+ View All
+                                        Jobs</a>
+                                </div>
+
+                            </div>
+                            <div class="d-md-block  col-md-3 rounded pt-2 ms-5">
+                                <img src="./images/ca1.jpeg" class="d-md-block d-none card-img-top img-fluid"
+                                    alt="Company Logo">
+                                <div class="d-block d-md-none mb-3 ps-0 mt-3 border-top"
+                                    style="width: 100%; margin-left: -60px;"></div>
+                                <a href="https://showcase.hirist.com/v2/rscp-ola-cabs-1407.html?ref=jscompanytab"
+                                    class="card-txt justify-content-center" target="_blank">VISIT COMPANY PAGE</a>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- ------------------------------------------------------------2card ends here------------------------------------------- -->
+                <!-- --------------------------------------------------------------3 card starts here---------------------------------- -->
+                <div class="card mt-4 ms-5 mb-3">
+                    <div class="card-body ps-5">
+                        <div class="row">
+                            <div class="col-md-8">
+                                <div class="img-logo">
+                                    <img src="./images/banner-images/ola.webp">
+                                </div>
+                                <h5 class="card-title font-weight-bolder">Virtusa</h5>
+                                <p class="card-text">naukri.com | Multiple Locations</p>
+                                <p class="card-text">Info Edge is India's leading consumer internet company known for
+                                    its strong brands in recruitment (naukri.com, ... (more))</p>
+
+                                <div class="text-muted d-flex-wrap mb-2">Perks & Benefits</div>
+                                <div id="perk" class="circle-company-perks">
+                                    <span id="display_perk" class="set-tooltip sc-bwzfXH kLlbyo px-1 me-2"><i
+                                            class="fa-solid fa-heart-pulse fa-lg"></i></span>
+                                    <span id="display_perk" class="set-tooltip sc-bwzfXH kLlbyo px-1 me-2">
+                                        <i class="fa-solid fa-dumbbell fa-lg"></i></span>
+                                    <span id="display_perk" class="set-tooltip sc-bwzfXH kLlbyo px-1 me-2"><i
+                                            class="fa-solid fa-heart-pulse fa-lg"></i></span>
+                                    <span id="display_perk" class="set-tooltip sc-bwzfXH kLlbyo px-1 me-2"><i
+                                            class="fa-solid fa-heart-pulse fa-lg"></i></span>
+                                    <span id="display_perk"
+                                        class="set-tooltip sc-bwzfXH kLlbyo px-1 me-3 backgrnd-bg">+2</span>
+                                    <a href="https://showcase.hirist.com/v2/rscp-ola-cabs-1407.html?ref=jscompanytab#Jobs"
+                                        class="btn btn-sm btn-outline-secondary  rounded-pill">+ View All
+                                        Jobs</a>
+                                </div>
+
+                            </div>
+                            <div class="d-md-block  col-md-3 rounded pt-2 ms-5">
+                                <img src="./images/ca1.jpeg" class="d-md-block d-none card-img-top img-fluid"
+                                    alt="Company Logo">
+                                <div class="d-block d-md-none mb-3 ps-0 mt-3 border-top"
+                                    style="width: 100%; margin-left: -60px;"></div>
+                                <a href="https://showcase.hirist.com/v2/rscp-ola-cabs-1407.html?ref=jscompanytab"
+                                    class="card-txt justify-content-center" target="_blank">VISIT COMPANY PAGE</a>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--------------------------------------------------------3card ends here-------------------------------------------- -->
+                <!-----------------------------------------------------4th card starts here-----------------------------------------   -->
+                <div class="card mt-4 ms-5 mb-3">
+                    <div class="card-body ps-5">
+                        <div class="row">
+                            <div class="col-md-8">
+                                <div class="img-logo">
+                                    <img src="./images/banner-images/ola.webp">
+                                </div>
+                                <h5 class="card-title font-weight-bolder">ZS</h5>
+                                <p class="card-text">naukri.com | Multiple Locations</p>
+                                <p class="card-text">Info Edge is India's leading consumer internet company known for
+                                    its strong brands in recruitment (naukri.com, ... (more))</p>
+
+                                <div class="text-muted d-flex-wrap mb-2">Perks & Benefits</div>
+                                <div id="perk" class="circle-company-perks">
+                                    <span id="display_perk" class="set-tooltip sc-bwzfXH kLlbyo px-1 me-2"><i
+                                            class="fa-solid fa-heart-pulse fa-lg"></i></span>
+                                    <span id="display_perk" class="set-tooltip sc-bwzfXH kLlbyo px-1 me-2">
+                                        <i class="fa-solid fa-dumbbell fa-lg"></i></span>
+                                    <span id="display_perk" class="set-tooltip sc-bwzfXH kLlbyo px-1 me-2"><i
+                                            class="fa-solid fa-heart-pulse fa-lg"></i></span>
+                                    <span id="display_perk" class="set-tooltip sc-bwzfXH kLlbyo px-1 me-2"><i
+                                            class="fa-solid fa-heart-pulse fa-lg"></i></span>
+                                    <span id="display_perk"
+                                        class="set-tooltip sc-bwzfXH kLlbyo px-1 me-3 backgrnd-bg">+2</span>
+                                    <a href="https://showcase.hirist.com/v2/rscp-ola-cabs-1407.html?ref=jscompanytab#Jobs"
+                                        class="btn btn-sm btn-outline-secondary  rounded-pill">+ View All
+                                        Jobs</a>
+                                </div>
+
+                            </div>
+                            <div class="d-md-block  col-md-3 rounded pt-2 ms-5">
+                                <img src="./images/ca1.jpeg" class="d-md-block d-none card-img-top img-fluid"
+                                    alt="Company Logo">
+                                <div class="d-block d-md-none mb-3 ps-0 mt-3 border-top"
+                                    style="width: 100%; margin-left: -60px;"></div>
+                                <a href="https://showcase.hirist.com/v2/rscp-ola-cabs-1407.html?ref=jscompanytab"
+                                    class="card-txt justify-content-center" target="_blank">VISIT COMPANY PAGE</a>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!---------------------------------------------------------4 card ends here---------------------------------------------  -->
+                <!-- -------------------------------------------------------5 card starts here--------------------------------------------- -->
+                <div class="card mt-4 ms-5 mb-3">
+                    <div class="card-body ps-5">
+                        <div class="row">
+                            <div class="col-md-8">
+                                <div class="img-logo">
+                                    <img src="./images/banner-images/ola.webp">
+                                </div>
+                                <h5 class="card-title font-weight-bolder">AB Inbev GCC</h5>
+                                <p class="card-text">naukri.com | Multiple Locations</p>
+                                <p class="card-text">Info Edge is India's leading consumer internet company known for
+                                    its strong brands in recruitment (naukri.com, ... (more))</p>
+
+                                <div class="text-muted d-flex-wrap mb-2">Perks & Benefits</div>
+                                <div id="perk" class="circle-company-perks">
+                                    <span id="display_perk" class="set-tooltip sc-bwzfXH kLlbyo px-1 me-2"><i
+                                            class="fa-solid fa-heart-pulse fa-lg"></i></span>
+                                    <span id="display_perk" class="set-tooltip sc-bwzfXH kLlbyo px-1 me-2">
+                                        <i class="fa-solid fa-dumbbell fa-lg"></i></span>
+                                    <span id="display_perk" class="set-tooltip sc-bwzfXH kLlbyo px-1 me-2"><i
+                                            class="fa-solid fa-heart-pulse fa-lg"></i></span>
+                                    <span id="display_perk" class="set-tooltip sc-bwzfXH kLlbyo px-1 me-2"><i
+                                            class="fa-solid fa-heart-pulse fa-lg"></i></span>
+                                    <span id="display_perk"
+                                        class="set-tooltip sc-bwzfXH kLlbyo px-1 me-3 backgrnd-bg">+2</span>
+                                    <a href="https://showcase.hirist.com/v2/rscp-ola-cabs-1407.html?ref=jscompanytab#Jobs"
+                                        class="btn btn-sm btn-outline-secondary  rounded-pill">+ View All
+                                        Jobs</a>
+                                </div>
+
+                            </div>
+                            <div class="d-md-block  col-md-3 rounded pt-2 ms-5">
+                                <img src="./images/ca1.jpeg" class="d-md-block d-none card-img-top img-fluid"
+                                    alt="Company Logo">
+                                <div class="d-block d-md-none mb-3 ps-0 mt-3 border-top"
+                                    style="width: 100%; margin-left: -60px;"></div>
+                                <a href="https://showcase.hirist.com/v2/rscp-ola-cabs-1407.html?ref=jscompanytab"
+                                    class="card-txt justify-content-center" target="_blank">VISIT COMPANY PAGE</a>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- ---------------------------------------------------5 card ends here--------------------------------------------------- -->
+                <!--   ------------------------------------6 card starts here------------------------------------------------- -->
+                <div class="card mt-4 ms-5 mb-3">
+                    <div class="card-body ps-5">
+                        <div class="row">
+                            <div class="col-md-8">
+                                <div class="img-logo">
+                                    <img src="./images/banner-images/ola.webp">
+                                </div>
+                                <h5 class="card-title font-weight-bolder">Azul Systems India Pvt Ltd</h5>
+                                <p class="card-text">naukri.com | Multiple Locations</p>
+                                <p class="card-text">Info Edge is India's leading consumer internet company known for
+                                    its strong brands in recruitment (naukri.com, ... (more))</p>
+
+                                <div class="text-muted d-flex-wrap mb-2">Perks & Benefits</div>
+                                <div id="perk" class="circle-company-perks">
+                                    <span id="display_perk" class="set-tooltip sc-bwzfXH kLlbyo px-1 me-2"><i
+                                            class="fa-solid fa-heart-pulse fa-lg"></i></span>
+                                    <span id="display_perk" class="set-tooltip sc-bwzfXH kLlbyo px-1 me-2">
+                                        <i class="fa-solid fa-dumbbell fa-lg"></i></span>
+                                    <span id="display_perk" class="set-tooltip sc-bwzfXH kLlbyo px-1 me-2"><i
+                                            class="fa-solid fa-heart-pulse fa-lg"></i></span>
+                                    <span id="display_perk" class="set-tooltip sc-bwzfXH kLlbyo px-1 me-2"><i
+                                            class="fa-solid fa-heart-pulse fa-lg"></i></span>
+                                    <span id="display_perk"
+                                        class="set-tooltip sc-bwzfXH kLlbyo px-1 me-3 backgrnd-bg">+2</span>
+                                    <a href="https://showcase.hirist.com/v2/rscp-ola-cabs-1407.html?ref=jscompanytab#Jobs"
+                                        class="btn btn-sm btn-outline-secondary  rounded-pill">+ View All
+                                        Jobs</a>
+                                </div>
+
+                            </div>
+                            <div class="d-md-block  col-md-3 rounded pt-2 ms-5">
+                                <img src="./images/ca1.jpeg" class="d-md-block d-none card-img-top img-fluid"
+                                    alt="Company Logo">
+                                <div class="d-block d-md-none mb-3 ps-0 mt-3 border-top"
+                                    style="width: 100%; margin-left: -60px;"></div>
+                                <a href="https://showcase.hirist.com/v2/rscp-ola-cabs-1407.html?ref=jscompanytab"
+                                    class="card-txt justify-content-center" target="_blank">VISIT COMPANY PAGE</a>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- -------------------------------------6th card ends here----------------------------------------------- -->
+                <!--- -----------------------------------------7card starts here---------------------------------------- -->
+                <div class="card mt-4 ms-5 mb-3">
+                    <div class="card-body ps-5">
+                        <div class="row">
+                            <div class="col-md-8">
+                                <div class="img-logo">
+                                    <img src="./images/banner-images/ola.webp">
+                                </div>
+                                <h5 class="card-title font-weight-bolder">Oceaneering</h5>
+                                <p class="card-text">naukri.com | Multiple Locations</p>
+                                <p class="card-text">Info Edge is India's leading consumer internet company known for
+                                    its strong brands in recruitment (naukri.com, ... (more))</p>
+
+                                <div class="text-muted d-flex-wrap mb-2">Perks & Benefits</div>
+                                <div id="perk" class="circle-company-perks">
+                                    <span id="display_perk" class="set-tooltip sc-bwzfXH kLlbyo px-1 me-2"><i
+                                            class="fa-solid fa-heart-pulse fa-lg"></i></span>
+                                    <span id="display_perk" class="set-tooltip sc-bwzfXH kLlbyo px-1 me-2">
+                                        <i class="fa-solid fa-dumbbell fa-lg"></i></span>
+                                    <span id="display_perk" class="set-tooltip sc-bwzfXH kLlbyo px-1 me-2"><i
+                                            class="fa-solid fa-heart-pulse fa-lg"></i></span>
+                                    <span id="display_perk" class="set-tooltip sc-bwzfXH kLlbyo px-1 me-2"><i
+                                            class="fa-solid fa-heart-pulse fa-lg"></i></span>
+                                    <span id="display_perk"
+                                        class="set-tooltip sc-bwzfXH kLlbyo px-1 me-3 backgrnd-bg">+2</span>
+                                    <a href="https://showcase.hirist.com/v2/rscp-ola-cabs-1407.html?ref=jscompanytab#Jobs"
+                                        class="btn btn-sm btn-outline-secondary  rounded-pill">+ View All
+                                        Jobs</a>
+                                </div>
+
+                            </div>
+                            <div class="d-md-block  col-md-3 rounded pt-2 ms-5">
+                                <img src="./images/ca1.jpeg" class="d-md-block d-none card-img-top img-fluid"
+                                    alt="Company Logo">
+                                <div class="d-block d-md-none mb-3 ps-0 mt-3 border-top"
+                                    style="width: 100%; margin-left: -60px;"></div>
+                                <a href="https://showcase.hirist.com/v2/rscp-ola-cabs-1407.html?ref=jscompanytab"
+                                    class="card-txt justify-content-center" target="_blank">VISIT COMPANY PAGE</a>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--------------------------------- 7 card ends here----------------------------------------------------  -->
+                <!-- --------------------------------8 card starts here ------------------------------------------------- -->
+                <div class="card mt-4 ms-5 mb-3">
+                    <div class="card-body ps-5">
+                        <div class="row">
+                            <div class="col-md-8">
+                                <div class="img-logo">
+                                    <img src="./images/banner-images/ola.webp">
+                                </div>
+                                <h5 class="card-title font-weight-bolder">Hexaware Technologies</h5>
+                                <p class="card-text">naukri.com | Multiple Locations</p>
+                                <p class="card-text">Info Edge is India's leading consumer internet company known for
+                                    its strong brands in recruitment (naukri.com, ... (more))</p>
+
+                                <div class="text-muted d-flex-wrap mb-2">Perks & Benefits</div>
+                                <div id="perk" class="circle-company-perks">
+                                    <span id="display_perk" class="set-tooltip sc-bwzfXH kLlbyo px-1 me-2"><i
+                                            class="fa-solid fa-heart-pulse fa-lg"></i></span>
+                                    <span id="display_perk" class="set-tooltip sc-bwzfXH kLlbyo px-1 me-2">
+                                        <i class="fa-solid fa-dumbbell fa-lg"></i></span>
+                                    <span id="display_perk" class="set-tooltip sc-bwzfXH kLlbyo px-1 me-2"><i
+                                            class="fa-solid fa-heart-pulse fa-lg"></i></span>
+                                    <span id="display_perk" class="set-tooltip sc-bwzfXH kLlbyo px-1 me-2"><i
+                                            class="fa-solid fa-heart-pulse fa-lg"></i></span>
+                                    <span id="display_perk"
+                                        class="set-tooltip sc-bwzfXH kLlbyo px-1 me-3 backgrnd-bg">+2</span>
+                                    <a href="https://showcase.hirist.com/v2/rscp-ola-cabs-1407.html?ref=jscompanytab#Jobs"
+                                        class="btn btn-sm btn-outline-secondary  rounded-pill">+ View All
+                                        Jobs</a>
+                                </div>
+
+                            </div>
+                            <div class="d-md-block  col-md-3 rounded pt-2 ms-5">
+                                <img src="./images/ca1.jpeg" class="d-md-block d-none card-img-top img-fluid"
+                                    alt="Company Logo">
+                                <div class="d-block d-md-none mb-3 ps-0 mt-3 border-top"
+                                    style="width: 100%; margin-left: -60px;"></div>
+                                <a href="https://showcase.hirist.com/v2/rscp-ola-cabs-1407.html?ref=jscompanytab"
+                                    class="card-txt justify-content-center" target="_blank">VISIT COMPANY PAGE</a>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--------------------------------------8 card ends here ------------------------------------------------------ -->
+                <!--  9 card starts here ------------------------------------------------------------------------ -->
+                <div class="card mt-4 ms-5 mb-3">
+                    <div class="card-body ps-5">
+                        <div class="row">
+                            <div class="col-md-8">
+                                <div class="img-logo">
+                                    <img src="./images/banner-images/ola.webp">
+                                </div>
+                                <h5 class="card-title font-weight-bolder">Meesho</h5>
+                                <p class="card-text">naukri.com | Multiple Locations</p>
+                                <p class="card-text">Info Edge is India's leading consumer internet company known for
+                                    its strong brands in recruitment (naukri.com, ... (more))</p>
+
+                                <div class="text-muted d-flex-wrap mb-2">Perks & Benefits</div>
+                                <div id="perk" class="circle-company-perks">
+                                    <span id="display_perk" class="set-tooltip sc-bwzfXH kLlbyo px-1 me-2"><i
+                                            class="fa-solid fa-heart-pulse fa-lg"></i></span>
+                                    <span id="display_perk" class="set-tooltip sc-bwzfXH kLlbyo px-1 me-2">
+                                        <i class="fa-solid fa-dumbbell fa-lg"></i></span>
+                                    <span id="display_perk" class="set-tooltip sc-bwzfXH kLlbyo px-1 me-2"><i
+                                            class="fa-solid fa-heart-pulse fa-lg"></i></span>
+                                    <span id="display_perk" class="set-tooltip sc-bwzfXH kLlbyo px-1 me-2"><i
+                                            class="fa-solid fa-heart-pulse fa-lg"></i></span>
+                                    <span id="display_perk"
+                                        class="set-tooltip sc-bwzfXH kLlbyo px-1 me-3 backgrnd-bg">+2</span>
+                                    <a href="https://showcase.hirist.com/v2/rscp-ola-cabs-1407.html?ref=jscompanytab#Jobs"
+                                        class="btn btn-sm btn-outline-secondary  rounded-pill">+ View All
+                                        Jobs</a>
+                                </div>
+
+                            </div>
+                            <div class="d-md-block  col-md-3 rounded pt-2 ms-5">
+                                <img src="./images/ca1.jpeg" class="d-md-block d-none card-img-top img-fluid"
+                                    alt="Company Logo">
+                                <div class="d-block d-md-none mb-3 ps-0 mt-3 border-top"
+                                    style="width: 100%; margin-left: -60px;"></div>
+                                <a href="https://showcase.hirist.com/v2/rscp-ola-cabs-1407.html?ref=jscompanytab"
+                                    class="card-txt justify-content-center" target="_blank">VISIT COMPANY PAGE</a>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- --------------------------------------9 card ends here ------------------------------------------------------ -->
+            </div>
+
+
+
+            <div class="featured-emp  d-none d-md-block col-md-4">
+                <div class="company-2heading mt-4">Featured Employees</div>
+                <!------------------------------------1 row-------------------------------------------- -->
+                <div class="featured-employees col-md-10 mt-4  ps-4 pb-3 pe-2 pt-3 bg-white">
+                    <div id="featuredRow" class="row">
+                        <div class="col-md-3 pd0">
+                            <div class="featured-item"><a rel="nofollow" target="_blank"><img
+                                        src="https://d3qr48lsanmyop.cloudfront.net/webp/1649157247706.webp"></a>
+                            </div>
+                        </div>
+                        <div class="col-md-3 pd0">
+                            <div class="featured-item"><a rel="nofollow" target="_blank"><img
+                                        src="https://d3qr48lsanmyop.cloudfront.net/webp/1698388956843.webp"></a>
+                            </div>
+                        </div>
+                        <div class="col-md-3 pd0">
+                            <div class="featured-item"><a rel="nofollow" target="_blank"><img
+                                        src="https://d3qr48lsanmyop.cloudfront.net/webp/1698389185584.webp"></a>
+                            </div>
+                        </div>
+                        <div class="col-md-3 pd0">
+                            <div class="featured-item"><a rel="nofollow" target="_blank"><img
+                                        src="https://d3qr48lsanmyop.cloudfront.net/webp/1698389365486.webp"></a>
+                            </div>
+                        </div>
+                    </div>
+                    <!----------------------------------------------------------1 row ends--------------------------------- -->
+                    <!-- --------------------------------------------------------2row starts-------------------------------------- -->
+                    <div id="featuredRow" class="row">
+                        <div class="col-md-3 pd0">
+                            <div class="featured-item"><a rel="nofollow" target="_blank"><img
+                                        src="https://d3qr48lsanmyop.cloudfront.net/webp/1698389614972.webp"></a>
+                            </div>
+                        </div>
+                        <div class="col-md-3 pd0">
+                            <div class="featured-item"><a rel="nofollow" target="_blank"><img
+                                        src="https://d3qr48lsanmyop.cloudfront.net/webp/1698389907014.webp"></a>
+                            </div>
+                        </div>
+                        <div class="col-md-3 pd0">
+                            <div class="featured-item"><a rel="nofollow" target="_blank"><img
+                                        src="https://d3qr48lsanmyop.cloudfront.net/webp/1698390424499.webp"></a>
+                            </div>
+                        </div>
+                        <div class="col-md-3 pd0">
+                            <div class="featured-item"><a rel="nofollow" target="_blank"><img
+                                        src="https://d3qr48lsanmyop.cloudfront.net/webp/1698390070725.webp"></a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-----------------------------------------------------------2 row ends here ------------------------------------------- -->
+                    <!-----------------------------------------------------------3 row starts here ------------------------------------- -->
+                    <div id="featuredRow" class="row">
+                        <div class="col-md-3 pd0">
+                            <div class="featured-item"><a rel="nofollow" target="_blank"><img
+                                        src="https://d3qr48lsanmyop.cloudfront.net/webp/1702878432042.webp"></a>
+                            </div>
+                        </div>
+                        <div class="col-md-3 pd0">
+                            <div class="featured-item"><a rel="nofollow" target="_blank"><img
+                                        src="https://d3qr48lsanmyop.cloudfront.net/webp/1710930870367.webp"></a>
+                            </div>
+                        </div>
+                        <div class="col-md-3 pd0">
+                            <div class="featured-item"><a rel="nofollow" target="_blank"><img
+                                        src="https://d3qr48lsanmyop.cloudfront.net/webp/1698391061253.webp"></a>
+                            </div>
+                        </div>
+                        <div class="col-md-3 pd0">
+                            <div class="featured-item"><a rel="nofollow" target="_blank"><img
+                                        src="https://d3qr48lsanmyop.cloudfront.net/webp/1698391326350.webp"></a>
+                            </div>
+                        </div>
+                    </div>
+                    <!------------------------------------------------ 3row ends here  --------------------------------------->
+                    <!-- --------------------------------------------------4 row starts here --------------------------------->
+                    <div id="featuredRow" class="row">
+                        <div class="col-md-3 pd0">
+                            <div class="featured-item"><a rel="nofollow" target="_blank"><img
+                                        src="https://d3qr48lsanmyop.cloudfront.net/webp/1698391473653.webp"></a>
+                            </div>
+                        </div>
+                        <div class="col-md-3 pd0">
+                            <div class="featured-item"><a rel="nofollow" target="_blank"><img
+                                        src="https://d3qr48lsanmyop.cloudfront.net/webp/1698392046651.webp"></a>
+                            </div>
+                        </div>
+                        <div class="col-md-3 pd0">
+                            <div class="featured-item"><a rel="nofollow" target="_blank"><img
+                                        src="https://d3qr48lsanmyop.cloudfront.net/webp/1683027647374.webp"></a>
+                            </div>
+                        </div>
+                        <div class="col-md-3 pd0">
+                            <div class="featured-item"><a rel="nofollow" target="_blank"><img
+                                        src="https://d3qr48lsanmyop.cloudfront.net/webp/1698392628235.webp"></a>
+                            </div>
+                        </div>
+                    </div>
+                    <!----------------------------------------------------------------4 row ends here ---------------------------------------  -->
+                    <!-- --------------------------------------------5 row starts here ---------------------------------------------------------------- -->
+                    <div id="featuredRow" class="row">
+                        <div class="col-md-3 pd0">
+                            <div class="featured-item"><a rel="nofollow" target="_blank"><img
+                                        src="https://d3qr48lsanmyop.cloudfront.net/webp/1698392738805.webp"></a>
+                            </div>
+                        </div>
+                        <div class="col-md-3 pd0">
+                            <div class="featured-item"><a rel="nofollow" target="_blank"><img
+                                        src="https://d3qr48lsanmyop.cloudfront.net/webp/1698392890498.webp"></a>
+                            </div>
+                        </div>
+                        <div class="col-md-3 pd0">
+                            <div class="featured-item"><a rel="nofollow" target="_blank"><img
+                                        src="https://d3qr48lsanmyop.cloudfront.net/webp/1698389760511.webp"></a>
+                            </div>
+                        </div>
+                        <div class="col-md-3 pd0">
+                            <div class="featured-item"><a rel="nofollow" target="_blank"><img
+                                        src="https://d3qr48lsanmyop.cloudfront.net/webp/1683027547554.webp"></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--------------------------------------5 row ends here ------------------------------------- -->
+                <!---------------------------------------------Diversity Conscious Employers section starts here----------- -->
+                <div class="company-2heading mt-4">Diversity Conscious Employers
+                    <button type="button" class="btn btn-diversity rounded-pill me-2"
+                        data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                        <span><i class="fa fa-greater-than fa-lg"></i></span>
+                    </button>
+                    <button type="button" class="btn btn-diversity rounded-pill"
+                        data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                        <span><i class="fa fa-greater-than fa-rotate-180 fa-lg"></i></span>
+                    </button>
+                </div>
+                <div class="diversity-employees rounded col-md-10 mt-3 ps-4 pb-3 pe-3 pt-3 bg-white">
+                    <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <div class="row">
+                                    <div class="featured-item-wrapper col-md-6">
+                                        <a rel="nofollow">
+                                            <div class="diversity-item d-flex align-items-center" rel="tooltip"
+                                                title="">
+                                                <div class="diversity-image">
+                                                    <img
+                                                        src="https://d3qr48lsanmyop.cloudfront.net/webp/1687955197023.webp">
+                                                </div>
+                                                <div class="diversity-data">
+                                                    <p style="font-size: 15px; font-weight: 700; margin: 0px;">American
+                                                        Express</p>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="featured-item-wrapper col-md-6">
+                                        <a rel="nofollow">
+                                            <div class="diversity-item d-flex align-items-center" rel="tooltip"
+                                                title="">
+                                                <div class="diversity-image">
+                                                    <img
+                                                        src="https://d3qr48lsanmyop.cloudfront.net/webp/1683027547554.webp">
+                                                </div>
+                                                <div class="diversity-data">
+                                                    <p style="font-size: 15px; font-weight: 700; margin: 0px;">American
+                                                        Express</p>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="row">
+                                    <div class="featured-item-wrapper col-md-6">
+                                        <a rel="nofollow">
+                                            <div class="diversity-item d-flex align-items-center" rel="tooltip"
+                                                title="">
+                                                <div class="diversity-image">
+                                                    <img
+                                                        src="https://d3qr48lsanmyop.cloudfront.net/webp/1683027547554.webp">
+                                                </div>
+                                                <div class="diversity-data">
+                                                    <p style="font-size: 15px; font-weight: 700; margin: 0px;">American
+                                                        Express</p>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="featured-item-wrapper col-md-6">
+                                        <a rel="nofollow">
+                                            <div class="diversity-item d-flex align-items-center" rel="tooltip"
+                                                title="">
+                                                <div class="diversity-image">
+                                                    <img
+                                                        src="https://d3qr48lsanmyop.cloudfront.net/webp/1698392628235.webp">
+                                                </div>
+                                                <div class="diversity-data">
+                                                    <p style="font-size: 15px; font-weight: 700; margin: 0px;">American
+                                                        Express</p>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- ------------------Diversity Employees ends Here---------------------------------------- -->
+                <!-------------------------------------------------------Featured Institute starts here -------------------------- -->
+                <div class="company-2heading mt-4">Featured Institute</div>
+
+                <div id="carouselIndicators" class="carousel slide">
+                    <div class="featured-institute rounded col-md-10 mt-4  ps-3 pb-5 pe-3 pt-3 bg-white">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <div><a class="mb10 featured-institute-wrapper" tabindex="-1"
+                                        style="width: 100%; display: inline-block;"><img class="wd-full"
+                                            src="https://d3qr48lsanmyop.cloudfront.net/webp/1711009015288.webp"
+                                            alt="IIM Lucknow" title="IIM Lucknow"></a></div>
+                            </div>
+                            <div class="carousel-item">
+                                <div><a class="mb10 featured-institute-wrapper" tabindex="-1"
+                                        style="width: 100%; display: inline-block;"><img class="wd-full"
+                                            src="https://d3qr48lsanmyop.cloudfront.net/webp/1711009150204.webp"
+                                            alt="IIM Raipur " title="IIM Raipur "></a></div>
+                            </div>
+                            <div class="carousel-item">
+                                <div><a class="mb10 featured-institute-wrapper" tabindex="-1"
+                                        style="width: 100%; display: inline-block;"><img class="wd-full"
+                                            src="https://d3qr48lsanmyop.cloudfront.net/webp/1711007712214.webp"
+                                            alt="Rushford Business School" title="Rushford Business School"></a>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div><a class="mb10 featured-institute-wrapper" tabindex="-1"
+                                        style="width: 100%; display: inline-block;"><img class="wd-full"
+                                            src="https://d3qr48lsanmyop.cloudfront.net/webp/1711009432737.webp"
+                                            alt="IIM Visakhapatnam" title="IIM Visakhapatnam"></a>
+                                </div>
+                            </div>
+                            <!-- --------------------5 -->
+                            <div class="carousel-item">
+                                <div><a class="mb10 featured-institute-wrapper" tabindex="-1"
+                                        style="width: 100%; display: inline-block;"><img class="wd-full"
+                                            src="https://d3qr48lsanmyop.cloudfront.net/webp/1711009587350.webp"
+                                            alt="ISB Executive Education" title="ISB Executive Education"></a>
+                                </div>
+                            </div>
+                            <!-- 6 -->
+                            <div class="carousel-item">
+                                <div><a class="mb10 featured-institute-wrapper" tabindex="-1"
+                                        style="width: 100%; display: inline-block;"><img class="wd-full"
+                                            src="https://d3qr48lsanmyop.cloudfront.net/webp/1711007854155.webp"
+                                            alt="IIM Lucknow" title="IIM Lucknow"></a>
+                                </div>
+                            </div>
+                            <!-- 7 -->
+                            <div class="carousel-item">
+                                <div><a class="mb10 featured-institute-wrapper" tabindex="-1"
+                                        style="width: 100%; display: inline-block;"><img class="wd-full"
+                                            src="https://d3qr48lsanmyop.cloudfront.net/webp/1711009432737.webp"
+                                            alt="IIM Visakhapatnam" title="IIM Visakhapatnam"></a>
+                                </div>
+                            </div>
+                            <!-- 8 -->
+                            <div class="carousel-item">
+                                <div><a class="mb10 featured-institute-wrapper" tabindex="-1"
+                                        style="width: 100%; display: inline-block;"><img class="wd-full"
+                                            src="https://d3qr48lsanmyop.cloudfront.net/webp/1710849116230.webp"></a>
+                                </div>
+                            </div>
+                            <!-- 9 -->
+                            <div class="carousel-item">
+                                <div><a class="mb10 featured-institute-wrapper" tabindex="-1"
+                                        style="width: 100%; display: inline-block;"><img class="wd-full"
+                                            src="https://d3qr48lsanmyop.cloudfront.net/webp/1711009432737.webp"
+                                            alt="IIM Visakhapatnam" title="IIM Visakhapatnam"></a>
+                                </div>
+                            </div>
+                            <!-- -------------------------slides ends ------------------------------------------------- -->
+                        </div>
+                        <div class="carousel-indicators">
+                            <button type="button" data-bs-target="#carouselIndicators" data-bs-slide-to="0"
+                                class="active" aria-current="true" aria-label="Slide 1"></button>
+                            <button type="button" data-bs-target="#carouselIndicators" data-bs-slide-to="1"
+                                aria-label="Slide 2"></button>
+                            <button type="button" data-bs-target="#carouselIndicators" data-bs-slide-to="2"
+                                aria-label="Slide 3"></button>
+                            <button type="button" data-bs-target="#carouselIndicators" data-bs-slide-to="3"
+                                aria-label="Slide 4"></button>
+                            <button type="button" data-bs-target="#carouselIndicators" data-bs-slide-to="4"
+                                aria-label="Slide 5"></button>
+                            <button type="button" data-bs-target="#carouselIndicators" data-bs-slide-to="5"
+                                aria-label="Slide 6"></button>
+                            <button type="button" data-bs-target="#carouselIndicators" data-bs-slide-to="6"
+                                aria-label="Slide 7"></button>
+                            <button type="button" data-bs-target="#carouselIndicators" data-bs-slide-to="7"
+                                aria-label="Slide 8"></button>
+                            <button type="button" data-bs-target="#carouselIndicators" data-bs-slide-to="8"
+                                aria-label="Slide 9"></button>
+
+                        </div>
+                    </div>
+                </div>
+
+                <!---------------------------------------------------Get the Hirist App  ------------------------------------->
+                <div class="featured-employees col-md-10 mt-4  ps-4 pb-3 pe-2 pt-3 bg-white">
+                    <div class="container ps-0 ms-0">
+                        <div class="row">
+                            <div class="col-4 rounded">
+                                <img src="./images/banner-images/hiristgetimage.png" class="hirist-image pt-4"
+                                    alt="Company Logo">
+                            </div>
+                            <div class="col-8">
+                                <h5 class="getthehirsit-heading">Get the Hirist app</h5>
+                                <p class="card-text">We will send you a link, open it on your phone to download the app
+                                </p>
+                            </div>
+                        </div>
+                        <div class="card-body">
+
+                            <form>
+                                <div class="input-group mt-4 mb-3">
+                                    <span class="input-group-text">+91</span>
+                                    <input type="text" class="form-control" placeholder="Mobile number">
+                                </div>
+                                <button type="submit" class="btn-app btn-outline-secondary">Share App Link</button>
+
+                            </form>
+                            <div class="btn-hire container-fluid d-flex mt-3">
+
+                                <a href="" class="btn-hirapp"><img src="./images/banner-images/googleappstore.png"></a>
+                                <a href="" class="btn-hirapp"><img src="./images/banner-images/googleplay.png"></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    </div>
+    </div>
+    </div>
+
+    <!-- -------------------------------------- -->
+    <aside role="button" aria-label="Scroll to top of page" tabindex="0" data-testid="react-scroll-up-button"
+        class="scrollup-button scrollup-button-transition align-items-center text-white">
+        <div><i class="fa-solid fa-arrow-up fa-lg"></i></div>
+    </aside>
+    <!-------------------------------------Companies Section ends here  ----------------------------------------------------- -->
+
+    <!-- <div>
+    <button type="button" class="btn-navclose" data-bs-dismiss="alert" aria-label="Close">
+            <a href="/companies.html"><span aria-hidden="true">&times;</span></a>
+    </button> 
+</div> -->
+
+    <!-- <div class="btn-navbar d-flex"> -->
+    <!-- <button type="button" data-bs-toggle="modal" data-bs-target="#NavbarModal"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"
+        class="navbar-toggler btn position-fixed bottom-0 start-20 align-items-center  d-sm-lg-block filter-bg" style="z-index: 1;">
+        <span class="navbar-toggler-icon"></span>
+        Filled
+    </button> -->
+
+    <!-- <button type="button"
+    class="btn position-fixed bottom-0 start-50  translate-middle d-md-none d-sm-lg-block filter-bg"
+    data-bs-toggle="modal" data-bs-target="#filterModal" style="z-index: 1;">
+    <i 
+</button> -->
+    <div class="modal fade position-fixed" id="NavbarModal" tabindex="-1" aria-labelledby="filterModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div>
+                    <button type="button" class="btn-navclose" data-bs-dismiss="alert" aria-label="Close">
+                        <a href="/companies.html"><span aria-hidden="true" style="color: white;">&times;</span></a>
+                    </button>
+                </div>
+                <!-- <div class="modal-header">
+                    <h5 class="modal-title" id="filterModalLabel">Filter By:</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button> -->
+                <!-- </div> -->
+                <div class="modal-body">
+                    <div class="modal-login d-block ps-3 container py-0">
+                        <div class="row d-flex g-0">
+                            <div class="col-md-2">
+                                <div class="card border-0 ms-4 mt-5 d-block d-sm-lg-none">
+                                    <i class="fa-solid fa-user fa-2xl"></i>
+                                </div>
+                            </div>
+                            <div class="col-md-8 g-0">
+                                <div class="card border-0">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Hello User,</h5>
+                                        <p class="card-text">Please Login to your account to view activity</p>
+                                        <button class="border-0 bg-warning  text-white rounded-pill">Login to your
+                                            account</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- <div>
+                            <button type="button" class="btn-navclose" data-bs-dismiss="alert"
+                                aria-label="Close">
+                                <a href="/companies.html"><span aria-hidden="true">&times;</span></a>
+                            </button>
+                        </div> -->
+                        <div class="navbar navbar-expand-lg navbar-light bg-white border-bottom d-flex">
+                            <div class="navbar-cnt  container ps-0 ms-0">
+                                <div class="row">
+
+                                    <div class="btn-drpdwn dropdown">
+                                        <button class="btn bg-white border-0 text-black d-flex " type="button"
+                                            id="dropdownMenuButton2" data-bs-toggle="dropdown" aria-expanded="false">
+                                            <div class="drop-heading">
+                                                Mobile Applications
+                                            </div>
+                                            <div>
+                                                <i class="fa-solid fa-greater-than fa-sm"
+                                                    style="margin-left: -50px ;"></i>
+                                            </div>
+                                        </button>
+
+                                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                                            <li><a class="dropdown-item" href="#">Course 1</a></li>
+                                            <li><a class="dropdown-item" href="#">Course 2</a></li>
+                                            <li><a class="dropdown-item" href="#">Course 3</a></li>
+                                        </ul>
+
+                                    </div>
+                                    <div class="row">
+                                        <div class="btn-drpdwn dropdown">
+                                            <button class="btn bg-white border-0 text-black d-flex align-items-center"
+                                                type="button" id="dropdownMenuButton2" data-bs-toggle="dropdown"
+                                                aria-expanded="false">
+                                                <div class="drop-heading">
+                                                    Frontend Developer
+                                                </div>
+                                                <div>
+                                                    <i class="fa-solid fa-greater-than fa-sm"></i>
+                                                </div>
+                                            </button>
+                                            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton2">
+                                                <li><a class="dropdown-item" href="#">Specialization 1</a></li>
+                                                <li><a class="dropdown-item" href="#">Specialization 2</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <!-- -------------------------------- -->
+                                    <div class="row">
+                                        <div class="btn-drpdwn dropdown">
+                                            <button class="btn bg-white border-0 text-black d-flex align-items-center"
+                                                type="button" id="dropdownMenuButton2" data-bs-toggle="dropdown"
+                                                aria-expanded="false">
+                                                <div class="drop-heading">
+                                                    Backend Developer
+                                                </div>
+                                                <div>
+                                                    <i class="fa-solid fa-greater-than fa-sm"></i>
+                                                </div>
+                                            </button>
+                                            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton2">
+                                                <li><a class="dropdown-item" href="#">Specialization 1</a></li>
+                                                <li><a class="dropdown-item" href="#">Specialization 2</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <!-- ------------------------------------------- -->
+                                    <div class="row">
+                                        <div class="btn-drpdwn dropdown">
+                                            <button class="btn bg-white border-0 text-black d-flex align-items-center"
+                                                type="button" id="dropdownMenuButton2" data-bs-toggle="dropdown"
+                                                aria-expanded="false">
+                                                <div class="drop-heading">
+                                                    DevOps
+                                                </div>
+                                                <div>
+                                                    <i class="fa-solid fa-greater-than fa-sm"></i>
+                                                </div>
+                                            </button>
+                                            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton2">
+                                                <li><a class="dropdown-item" href="#">Specialization 1</a></li>
+                                                <li><a class="dropdown-item" href="#">Specialization 2</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <!--  -->
+                                    <div class="row">
+                                        <div class="btn-drpdwn dropdown">
+                                            <button class="btn bg-white border-0 text-black d-flex align-items-center"
+                                                type="button" id="dropdownMenuButton2" data-bs-toggle="dropdown"
+                                                aria-expanded="false">
+                                                <div class="drop-heading">
+                                                    Emerging Technologies
+                                                </div>
+                                                <div>
+                                                    <i class="fa-solid fa-greater-than fa-sm"></i>
+                                                </div>
+                                            </button>
+                                            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton2">
+                                                <li><a class="dropdown-item" href="#">Specialization 1</a></li>
+                                                <li><a class="dropdown-item" href="#">Specialization 2</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <!-- ---------------------------------------------- -->
+                                    <div class="row">
+                                        <div class="btn-drpdwn dropdown">
+                                            <button class="btn bg-white border-0 text-black d-flex align-items-center"
+                                                type="button" id="dropdownMenuButton2" data-bs-toggle="dropdown"
+                                                aria-expanded="false">
+                                                <div class="drop-heading">
+                                                    Others
+                                                </div>
+                                                <div>
+                                                    <i class="fa-solid fa-greater-than fa-sm"></i>
+                                                </div>
+                                            </button>
+                                            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton2">
+                                                <li><a class="dropdown-item" href="#">Specialization 1</a></li>
+                                                <li><a class="dropdown-item" href="#">Specialization 2</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <!-- ----------------------------------------------------- -->
+                                    <div class="row">
+                                        <div class="btn-drpdwn dropdown">
+                                            <button class="btn-wfh btn bg-white border-0 text-black" type="button"
+                                                id="dropdownMenuButton2" data-bs-toggle="dropdown"
+                                                aria-expanded="false">
+                                                Work From Home <span class="btn-badge">New</span>
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <!------------------------------------------------------  -->
+                                    <div class="row">
+                                        <div class="btn-drpdwn dropdown">
+                                            <button class="btn bg-white border-0 text-black d-flex align-items-center"
+                                                type="button" id="dropdownMenuButton2" data-bs-toggle="dropdown"
+                                                aria-expanded="false">
+                                                Internship
+                                            </button>
+                                            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton2">
+                                                <li><a class="dropdown-item" href="#">Specialization 1</a></li>
+                                                <li><a class="dropdown-item" href="#">Specialization 2</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+
+
+
+
+                                    <!--  -->
+
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- </div> -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            <!--  -------------------->
+            <!-- </div>
+    </div>
+
+    </div>
+
+    </div> -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            <script src="main.js"></script>
+</body>
+
+</html>
